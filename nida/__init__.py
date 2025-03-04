@@ -51,8 +51,6 @@ class Nida(object):
         return new_user_data
 
     def preprocess_user_data(self, user_data: dict) -> dict:
-        if user_data.get("PHOTO") and user_data.get("SIGNATURE"):
-            user_data = self.pythonize_images(user_data)
         user_data = self.capitalize_keys(user_data)
         user_data = Dict(user_data)
         return user_data
